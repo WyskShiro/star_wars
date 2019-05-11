@@ -2,11 +2,11 @@
 - [x] Criar arquitetura de pastas
 
 - [ ] Carregar lista de filmes
-  - [ ] Colocar no projeto os 7 posters necessários dos filmes
-  - [ ] Criar lista de filmes
-  - [ ] Puxar filmes da API
-  - [ ] Pegar os filmes e inserir na lista de filmes
-    - [ ] Mostrar o poster, nome, ano de lançamento e a sinopse
+  - [x] Colocar no projeto os 7 posters necessários dos filmes
+  - [x] Criar lista de filmes
+  - [x] Puxar filmes da API
+  - [x] Pegar os filmes e inserir na lista de filmes
+    - [x] Mostrar o poster, nome, ano de lançamento e a sinopse
   - [ ] Criar a lógica para ao clicar em um filme ir para a próxima tela
 
 - [ ] Carregar detalhes de um filme selecionado
