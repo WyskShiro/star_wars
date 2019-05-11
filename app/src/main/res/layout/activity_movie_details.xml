@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/backgroud_image"
+              tools:context=".view.activity.MovieDetailsActivity"
+              android:padding="5dp"
+>
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cv"
+            app:cardCornerRadius="10dp"
+    >
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/moviedetails_relativelayout"
+                android:padding="5dp"
+        >
+
+            <ImageView
+                    android:id="@+id/movieposter_imageview"
+                    android:layout_width="170dp"
+                    android:layout_height="255dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/episode4_poster"/>
+
+            <TextView
+                    android:id="@+id/moviename_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/movieposter_imageview"
+                    android:text="******************************"/>
+
+            <TextView
+                    android:id="@+id/movieopeningcrawl_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/movieposter_imageview"
+                    android:layout_centerVertical="true"
+                    android:text="******************************"/>
+
+            <TextView
+                    android:id="@+id/moviereleasedate_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/movieposter_imageview"
+
+                    android:layout_alignBaseline="@+id/vehicles_button"
+                    android:text="******************************"/>
+
+            <Button android:id="@+id/characters_button"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/movieposter_imageview"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/buttonborder"
+                    android:textColor="@color/white"
+                    android:text="@string/characters"/>
+
+            <Button android:id="@+id/planets_button"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/characters_button"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/buttonborder"
+                    android:textColor="@color/white"
+                    android:text="@string/planets"/>
+
+            <Button android:id="@+id/starships_button"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/planets_button"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/buttonborder"
+                    android:textColor="@color/white"
+                    android:text="@string/starships"/>
+
+            <Button android:id="@+id/vehicles_button"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/starships_button"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/buttonborder"
+                    android:textColor="@color/white"
+                    android:text="@string/vehicles"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -12,17 +12,6 @@ import com.example.jera_starwars.view.viewholder.MovieViewHolder
 class MovieAdapter(var movieList: List<Movie>, var context: Context) :
     RecyclerView.Adapter<MovieViewHolder>() {
 
-    // Para facilitar qual imagem carregar na lista dependendo do filme sendo renderizado no Recycler View
-    private val posters = hashMapOf(
-         1 to R.drawable.episode1_poster,
-         2 to R.drawable.episode2_poster,
-         3 to R.drawable.episode3_poster,
-         4 to R.drawable.episode4_poster,
-         5 to R.drawable.episode5_poster,
-         6 to R.drawable.episode6_poster,
-         7 to R.drawable.episode7_poster)
-
-
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): MovieViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.itemcard_movie, parent, false)
 
@@ -36,11 +25,12 @@ class MovieAdapter(var movieList: List<Movie>, var context: Context) :
     override fun onBindViewHolder(viewHolder: MovieViewHolder, listPosition: Int) {
         val movie = movieList[listPosition]
 
+        viewHolder.movie = movie
         viewHolder.nameTextView.text = movie.title
         viewHolder.openingCrawlTextView.text = getFirstParagraph(movie)
         viewHolder.releaseDateTextView.text = movie.release_date
 
-        val drawablePoster = ContextCompat.getDrawable(context, posters[movie.episode_id]!!)
+        val drawablePoster = ContextCompat.getDrawable(context, movie.posters[movie.episode_id]!!)
         viewHolder.moviePosterImageView.setImageDrawable(drawablePoster)
     }
 

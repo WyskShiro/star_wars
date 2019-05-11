@@ -1,5 +1,6 @@
 package com.example.jera_starwars.model.dataclass
 
+import com.example.jera_starwars.R
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
@@ -19,6 +20,16 @@ class Movie : Serializable {
     lateinit var created: String
     lateinit var edited: String
     lateinit var url: String
+
+    // Para facilitar qual imagem carregar na lista dependendo do filme sendo renderizado no Recycler View
+    val posters = hashMapOf(
+        1 to R.drawable.episode1_poster,
+        2 to R.drawable.episode2_poster,
+        3 to R.drawable.episode3_poster,
+        4 to R.drawable.episode4_poster,
+        5 to R.drawable.episode5_poster,
+        6 to R.drawable.episode6_poster,
+        7 to R.drawable.episode7_poster)
 
 
 }
