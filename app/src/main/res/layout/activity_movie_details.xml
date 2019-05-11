@@ -7,38 +7,45 @@
               android:layout_height="match_parent"
               android:background="@drawable/backgroud_image"
               tools:context=".view.activity.MovieDetailsActivity"
-              android:padding="5dp"
+              android:padding="5sp"
 >
 
     <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/cv"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="10sp"
     >
 
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/moviedetails_relativelayout"
-                android:padding="5dp"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="5sp"
+                android:paddingRight="5sp"
         >
 
             <ImageView
                     android:id="@+id/movieposter_imageview"
-                    android:layout_width="170dp"
-                    android:layout_height="255dp"
+                    android:layout_width="150sp"
+                    android:layout_height="235sp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginRight="5sp"
                     android:src="@drawable/episode4_poster"/>
 
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+            </LinearLayout>
             <TextView
                     android:id="@+id/moviename_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/movieposter_imageview"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="5sp"
+                    android:textSize="14sp"
                     android:text="*******"/>
 
             <TextView
@@ -48,7 +55,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_toRightOf="@+id/movieposter_imageview"
                     android:layout_below="@+id/moviename_textview"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="5sp"
+                    android:textSize="14sp"
                     android:text="******"/>
 
 
@@ -59,7 +67,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_toRightOf="@+id/movieposter_imageview"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="5sp"
+                    android:textSize="13sp"
                     android:text="******************************"/>
 
 
@@ -70,43 +79,44 @@
                     android:layout_alignParentRight="true"
                     android:layout_toRightOf="@+id/movieposter_imageview"
                     android:layout_alignBaseline="@+id/vehicles_button"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="5sp"
+                    android:textSize="14sp"
                     android:text="******************************"/>
 
 
 
             <Button android:id="@+id/characters_button"
-                    android:layout_width="170dp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/movieposter_imageview"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="5sp"
                     android:background="@drawable/buttonborder"
                     android:textColor="@color/white"
                     android:text="@string/characters"/>
 
             <Button android:id="@+id/planets_button"
-                    android:layout_width="170dp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/characters_button"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="5sp"
                     android:background="@drawable/buttonborder"
                     android:textColor="@color/white"
                     android:text="@string/planets"/>
 
             <Button android:id="@+id/starships_button"
-                    android:layout_width="170dp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/planets_button"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="5sp"
                     android:background="@drawable/buttonborder"
                     android:textColor="@color/white"
                     android:text="@string/starships"/>
 
             <Button android:id="@+id/vehicles_button"
-                    android:layout_width="170dp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/starships_button"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="5sp"
                     android:background="@drawable/buttonborder"
                     android:textColor="@color/white"
                     android:text="@string/vehicles"/>
