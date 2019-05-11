@@ -8,15 +8,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class Retrofit{
 
-    val gsonBuilder = GsonBuilder()
-        //.registerTypeAdapter(Movie::class.java, MovieDeserializer())
+    private val gsonBuilder = GsonBuilder()
         .create()
 
-    val retrofit = Retrofit.Builder()
+    private val retrofit = Retrofit.Builder()
         .baseUrl("https://swapi.co/")
         .addConverterFactory(GsonConverterFactory.create(gsonBuilder))
         .build()
-
 
     fun movieService() : MovieService = retrofit.create(MovieService::class.java)
 }

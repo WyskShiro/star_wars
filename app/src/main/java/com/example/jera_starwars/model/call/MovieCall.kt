@@ -19,14 +19,9 @@ class MovieCall(val movieListPresenter: MovieListPresenter) {
             }
 
             override fun onResponse(call: Call<MovieJSON>, response: Response<MovieJSON>) {
-                val movieList = response.body()
-                //System.out.println(movieList!![0])
-
-                //TODO implementar
+                movieListPresenter.setAllMovies(response.body()!!.results)
             }
-
         })
 
-        //call.enqueue.onResponse(movieListPresenter.setAllMovies(response))
     }
 }

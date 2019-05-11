@@ -4,19 +4,14 @@ import com.example.jera_starwars.model.call.MovieCall
 import com.example.jera_starwars.model.dataclass.Movie
 import com.example.jera_starwars.view.viewcontract.MovieViewContract
 
-class MovieListPresenter {
-    val movieViewContract: MovieViewContract
-
-    constructor(movieViewContract: MovieViewContract) {
-        this.movieViewContract = movieViewContract
-    }
+class MovieListPresenter(private val movieViewContract: MovieViewContract) {
 
     fun getAllMovies() {
         val movieCall = MovieCall(this)
         movieCall.callGetAllMovies()
     }
 
-    fun setAllMovies(movieList: ArrayList<Movie>?) {
+    fun setAllMovies(movieList: List<Movie>?) {
         if (movieList != null) {
             movieViewContract.updateMoviesOnRecyclerView(movieList)
         }
