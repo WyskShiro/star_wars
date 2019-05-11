@@ -26,13 +26,16 @@ class MovieViewHolder : RecyclerView.ViewHolder, View.OnClickListener {
     var nameTextView: TextView
     var openingCrawlTextView: TextView
     var releaseDateTextView: TextView
+    var directorTextView: TextView
     var moviePosterImageView: ImageView
+
     lateinit var movie: Movie
 
     constructor(itemView: View) : super(itemView) {
         nameTextView = itemView.findViewById(R.id.moviename_textview)
         openingCrawlTextView = itemView.findViewById(R.id.movieopeningcrawl_textview)
         releaseDateTextView = itemView.findViewById(R.id.moviereleasedate_textview)
+        directorTextView = itemView.findViewById(R.id.moviedirector_textview)
         moviePosterImageView = itemView.findViewById(R.id.movieposter_imageview)
 
         itemView.setOnClickListener(this)

@@ -11,6 +11,7 @@ import com.example.jera_starwars.model.dataclass.Movie
 
 class MovieDetailsActivity : AppCompatActivity() {
     lateinit var nameTextView: TextView
+    lateinit var directorTextView: TextView
     lateinit var openingCrawlTextView: TextView
     lateinit var releaseDateTextView: TextView
     lateinit var moviePosterImageView: ImageView
@@ -23,6 +24,7 @@ class MovieDetailsActivity : AppCompatActivity() {
         supportActionBar!!.title = getString(R.string.returnToMovieList)
 
         nameTextView = findViewById(R.id.moviename_textview)
+        directorTextView = findViewById(R.id.moviedirector_textview)
         openingCrawlTextView = findViewById(R.id.movieopeningcrawl_textview)
         releaseDateTextView = findViewById(R.id.moviereleasedate_textview)
         moviePosterImageView = findViewById(R.id.movieposter_imageview)
@@ -31,6 +33,7 @@ class MovieDetailsActivity : AppCompatActivity() {
             val movie = intent.extras.getSerializable("movie") as Movie
 
             nameTextView.text = movie.title
+            directorTextView.text = movie.director
             openingCrawlTextView.text = movie.opening_crawl
             releaseDateTextView.text = movie.release_date
 

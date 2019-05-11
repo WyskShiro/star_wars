@@ -37,9 +37,20 @@
                     android:id="@+id/moviename_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/movieposter_imageview"
+                    android:layout_marginLeft="5dp"
+                    android:text="*******"/>
+
+            <TextView
+                    android:id="@+id/moviereleasedate_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_toRightOf="@+id/movieposter_imageview"
-                    android:text="******************************"/>
+                    android:layout_below="@+id/moviename_textview"
+                    android:layout_marginLeft="5dp"
+                    android:text="******"/>
+
 
             <TextView
                     android:id="@+id/movieopeningcrawl_textview"
@@ -48,17 +59,21 @@
                     android:layout_alignParentRight="true"
                     android:layout_toRightOf="@+id/movieposter_imageview"
                     android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
                     android:text="******************************"/>
 
+
             <TextView
-                    android:id="@+id/moviereleasedate_textview"
+                    android:id="@+id/moviedirector_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_toRightOf="@+id/movieposter_imageview"
-
                     android:layout_alignBaseline="@+id/vehicles_button"
+                    android:layout_marginLeft="5dp"
                     android:text="******************************"/>
+
+
 
             <Button android:id="@+id/characters_button"
                     android:layout_width="170dp"

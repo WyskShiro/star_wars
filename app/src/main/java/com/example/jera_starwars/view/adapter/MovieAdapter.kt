@@ -27,6 +27,7 @@ class MovieAdapter(var movieList: List<Movie>, var context: Context) :
 
         viewHolder.movie = movie
         viewHolder.nameTextView.text = movie.title
+        viewHolder.directorTextView.text = movie.director
         viewHolder.openingCrawlTextView.text = getFirstParagraph(movie)
         viewHolder.releaseDateTextView.text = movie.release_date
 
