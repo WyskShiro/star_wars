@@ -4,5 +4,5 @@
     <string name="planets">Species</string>
     <string name="starships">Starships</string>
     <string name="vehicles">Vehicles</string>
-    <string name="returnToMovieList">Return to previous screen</string>
+    <string name="returnToPreviousScreen">Return to previous screen</string>
 </resources>

@@ -9,6 +9,7 @@
         tools:context=".view.activity.MovieResourcesList">
 
     <TextView
+            android:id="@+id/resourcestitle_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5sp"
@@ -19,7 +20,7 @@
     />
 
     <android.support.v7.widget.RecyclerView
-            android:id="@+id/movieresources_recylerview"
+            android:id="@+id/resources_recylerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5sp"

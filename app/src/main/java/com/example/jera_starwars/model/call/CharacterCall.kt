@@ -10,18 +10,16 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class CharacterCall(val characterListPresenter: CharacterListPresenter) {
-    fun callGetPeopleWithId(characterId: Int) {
+    fun callGetCharacterWithId(characterId: String) {
         val retrofit = Retrofit().characterService()
         val call = retrofit.getCharacterWithId(characterId)
 
         call.enqueue(object : Callback<Character> {
             override fun onFailure(call: Call<Character>, t: Throwable) {
-                //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
             override fun onResponse(call: Call<Character>, response: Response<Character>) {
-                //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                //movieListPresenter.setAllMovies(response.body()!!.results)
+                characterListPresenter.insertCharacterOnList(response.body())
             }
         })
 

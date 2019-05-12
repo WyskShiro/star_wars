@@ -7,5 +7,5 @@ import retrofit2.http.Path
 
 interface CharacterService {
     @GET("api/people/{id}")
-    fun getCharacterWithId(@Path("id") characterId: Int): Call<Character>
+    fun getCharacterWithId(@Path("id") characterId: String): Call<Character>
 }
