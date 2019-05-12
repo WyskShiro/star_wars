@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_toRightOf="@+id/movieposter_imageview"
-                    android:layout_alignBaseline="@+id/vehicles_button"
+                    android:layout_alignBaseline="@+id/species_button"
                     android:layout_marginLeft="5sp"
                     android:textSize="14sp"
                     android:text="******************************"/>
@@ -112,14 +112,14 @@
                     android:textColor="@color/white"
                     android:text="@string/starships"/>
 
-            <Button android:id="@+id/vehicles_button"
+            <Button android:id="@+id/species_button"
                     android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/starships_button"
                     android:layout_marginTop="5sp"
                     android:background="@drawable/buttonborder"
                     android:textColor="@color/white"
-                    android:text="@string/vehicles"/>
+                    android:text="@string/species"/>
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

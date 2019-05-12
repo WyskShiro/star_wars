@@ -19,6 +19,7 @@ class MovieDetailsActivity : AppCompatActivity() {
     lateinit var moviePosterImageView: ImageView
 
     lateinit var charactersButton: Button
+    lateinit var speciesButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,8 @@ class MovieDetailsActivity : AppCompatActivity() {
 
 
         charactersButton = findViewById(R.id.characters_button)
+        speciesButton = findViewById(R.id.species_button)
+
         var movie: Movie? = null
 
         if (intent.hasExtra("movie")) {
@@ -53,6 +56,12 @@ class MovieDetailsActivity : AppCompatActivity() {
         charactersButton.setOnClickListener {
             val intentMovieResources = Intent(this, MovieResourcesListActivity::class.java)
             intentMovieResources.putExtra("characters_list", movie!!.characters as ArrayList<String>)
+            startActivity(intentMovieResources)
+        }
+
+        speciesButton.setOnClickListener {
+            val intentMovieResources = Intent(this, MovieResourcesListActivity::class.java)
+            intentMovieResources.putExtra("species_list", movie!!.species as ArrayList<String>)
             startActivity(intentMovieResources)
         }
 

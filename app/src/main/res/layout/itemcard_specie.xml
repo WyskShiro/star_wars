@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent" android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:padding="5sp"
+>
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cv"
+            app:cardCornerRadius="10sp"
+    >
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+        >
+
+            <TextView
+                    android:id="@+id/name_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*************"/>
+
+
+            <TextView
+                    android:id="@+id/averageheight_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/name_textview"
+                    android:text="****************"/>
+
+
+            <TextView
+                    android:id="@+id/classification_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_textview"
+                    android:text="*************"/>
+
+
+            <TextView
+                    android:id="@+id/averagelifespan_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/averageheight_textview"
+                    android:text="****************"/>
+
+
+            <TextView
+                    android:id="@+id/eyecolors_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/classification_textview"
+                    android:text="******************************"/>
+
+
+            <TextView
+                    android:id="@+id/designation_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/averagelifespan_textview"
+                    android:text="****************"/>
+
+
+
+            <TextView
+                    android:id="@+id/haircolors_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/eyecolors_textview"
+                    android:text="******************************"/>
+
+
+            <TextView
+                    android:id="@+id/language_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/designation_textview"
+                    android:text="****************"/>
+
+
+            <TextView
+                    android:id="@+id/skincolors_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/haircolors_textview"
+                    android:text="******************************"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+

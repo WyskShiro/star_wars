@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Jera_StarWars</string>
     <string name="characters">Characters</string>
-    <string name="planets">Species</string>
+    <string name="species">Species</string>
+    <string name="planets">Planets</string>
     <string name="starships">Starships</string>
-    <string name="vehicles">Vehicles</string>
     <string name="returnToPreviousScreen">Return to previous screen</string>
 </resources>
