@@ -26,15 +26,6 @@
 
 
             <TextView
-                    android:id="@+id/gender_textview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/name_textview"
-                    android:text="*************"/>
-
-
-
-            <TextView
                     android:id="@+id/birthyear_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -45,13 +36,20 @@
 
 
             <TextView
+                    android:id="@+id/gender_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_textview"
+                    android:text="*************"/>
+
+
+            <TextView
                     android:id="@+id/height_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:layout_alignParentRight="true"
-                    android:layout_toRightOf="@+id/gender_textview"
-                    android:layout_below="@+id/name_textview"
+                    android:layout_below="@+id/birthyear_textview"
                     android:text="****************"/>
 
 
@@ -69,8 +67,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:layout_alignParentRight="true"
-                    android:layout_toRightOf="@+id/eyecolor_textview"
-                    android:layout_below="@+id/gender_textview"
+                    android:layout_below="@+id/height_textview"
                     android:text="****************"/>
 
 
@@ -89,8 +86,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:layout_alignParentRight="true"
-                    android:layout_toRightOf="@+id/haircolor_textview"
-                    android:layout_below="@+id/eyecolor_textview"
+                    android:layout_below="@+id/mass_textview"
                     android:text="****************"/>
 
 
