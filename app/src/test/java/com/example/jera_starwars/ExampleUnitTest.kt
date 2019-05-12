@@ -13,9 +13,9 @@ import org.junit.Assert.*
 class ExampleUnitTest {
 
     @Test
-    fun get_all_movies_test() {
+    fun get_all_movies() {
         val retrofit = Retrofit().movieService()
-        val call = retrofit.listAllMovies()
+        val call = retrofit.getAllMovies()
 
         val response = call
             .execute()
@@ -24,5 +24,15 @@ class ExampleUnitTest {
         val allMoviesCount = response!!.results.size
 
         assertEquals(7, allMoviesCount)
+    }
+
+    @Test
+    fun get_a_character() {
+        val retrofit = Retrofit().characterService()
+        val call = retrofit.getCharacterWithId(1)
+        val response = call.execute().body()
+
+        assertNotNull(response)
+        assertEquals("19BBY", response!!.birth_year)
     }
 }

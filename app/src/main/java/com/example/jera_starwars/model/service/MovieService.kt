@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface MovieService {
     @GET("api/films/")
-    fun listAllMovies(): Call<MovieJSON>
+    fun getAllMovies(): Call<MovieJSON>
 }

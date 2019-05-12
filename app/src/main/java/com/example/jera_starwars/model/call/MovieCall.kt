@@ -11,7 +11,7 @@ class MovieCall(val movieListPresenter: MovieListPresenter) {
 
     fun callGetAllMovies() {
         val retrofit = Retrofit().movieService()
-        val call = retrofit.listAllMovies()
+        val call = retrofit.getAllMovies()
 
         call.enqueue(object : Callback<MovieJSON> {
             override fun onFailure(call: Call<MovieJSON>, t: Throwable) {
