@@ -1,7 +1,7 @@
 package com.example.jera_starwars.model.call
 
 import com.example.jera_starwars.model.Retrofit
-import com.example.jera_starwars.model.datajson.MovieJSON
+import com.example.jera_starwars.model.dataclass.MovieJSON
 import com.example.jera_starwars.presenter.MovieListPresenter
 import retrofit2.Call
 import retrofit2.Callback

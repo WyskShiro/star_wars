@@ -1,7 +1,6 @@
-package com.example.jera_starwars.model.datajson
+package com.example.jera_starwars.model.dataclass
 
 import com.example.jera_starwars.model.dataclass.Movie
-import com.google.gson.annotations.SerializedName
 
 class MovieJSON {
     lateinit var results: List<Movie>

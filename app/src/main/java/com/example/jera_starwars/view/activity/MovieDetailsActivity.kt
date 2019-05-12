@@ -1,9 +1,9 @@
 package com.example.jera_starwars.view.activity
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
+import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
@@ -51,7 +51,7 @@ class MovieDetailsActivity : AppCompatActivity() {
 
 
         charactersButton.setOnClickListener {
-            val intentMovieResources = Intent(this, MovieResourcesList::class.java)
+            val intentMovieResources = Intent(this, MovieResourcesListActivity::class.java)
             intentMovieResources.putExtra("characters_list", movie!!.characters as ArrayList<String>)
             startActivity(intentMovieResources)
         }

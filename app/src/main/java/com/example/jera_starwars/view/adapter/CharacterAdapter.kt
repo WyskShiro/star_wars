@@ -1,15 +1,12 @@
 package com.example.jera_starwars.view.adapter
 
 import android.content.Context
-import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.jera_starwars.R
-import com.example.jera_starwars.model.dataclass.Movie
-import com.example.jera_starwars.view.viewholder.CharacterViewHolder
-import com.example.jera_starwars.view.viewholder.MovieViewHolder
 import com.example.jera_starwars.model.dataclass.Character
+import com.example.jera_starwars.view.viewholder.CharacterViewHolder
 
 
 class CharacterAdapter(var characterList: ArrayList<Character>, var context: Context) :

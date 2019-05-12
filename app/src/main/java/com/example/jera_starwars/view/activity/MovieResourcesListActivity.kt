@@ -1,7 +1,7 @@
 package com.example.jera_starwars.view.activity
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.MenuItem
@@ -9,13 +9,11 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.jera_starwars.R
 import com.example.jera_starwars.model.dataclass.Character
-import com.example.jera_starwars.model.dataclass.Movie
 import com.example.jera_starwars.presenter.CharacterListPresenter
 import com.example.jera_starwars.view.adapter.CharacterAdapter
-import com.example.jera_starwars.view.adapter.MovieAdapter
 import com.example.jera_starwars.view.viewcontract.CharacterViewContract
 
-class MovieResourcesList : AppCompatActivity(), CharacterViewContract {
+class MovieResourcesListActivity : AppCompatActivity(), CharacterViewContract {
 
     lateinit var resourcesTitleTextView: TextView
     private lateinit var resourcesList: ArrayList<String>
@@ -60,6 +58,7 @@ class MovieResourcesList : AppCompatActivity(), CharacterViewContract {
     }
 
     override fun updateCharactersOnRecyclerView(character: Character) {
+
         (resourcesRecyclerView.adapter as CharacterAdapter).characterList.add(character)
         resourcesRecyclerView.adapter!!.notifyDataSetChanged()
     }

@@ -1,16 +1,11 @@
 package com.example.jera_starwars.view.viewholder
 
-import android.content.Intent
-import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.jera_starwars.R
-import com.example.jera_starwars.model.dataclass.Movie
-import com.example.jera_starwars.view.activity.MovieDetailsActivity
 
-class CharacterViewHolder : RecyclerView.ViewHolder{
+class CharacterViewHolder : RecyclerView.ViewHolder {
 
     var nameTextView: TextView
     var genderTextView: TextView

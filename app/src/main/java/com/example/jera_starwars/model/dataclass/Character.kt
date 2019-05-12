@@ -2,7 +2,7 @@ package com.example.jera_starwars.model.dataclass
 
 import java.io.Serializable
 
-class Character : Serializable {
+class Character : Serializable, Vehicle {
     lateinit var name: String
     lateinit var gender: String
 

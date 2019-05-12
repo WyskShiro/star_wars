@@ -6,7 +6,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.example.jera_starwars.R
 import com.example.jera_starwars.model.dataclass.Movie
 import com.example.jera_starwars.view.activity.MovieDetailsActivity

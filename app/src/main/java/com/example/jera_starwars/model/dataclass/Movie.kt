@@ -1,7 +1,6 @@
 package com.example.jera_starwars.model.dataclass
 
 import com.example.jera_starwars.R
-import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 class Movie : Serializable {
