@@ -27,6 +27,7 @@
         </activity>
         <activity android:name=".view.activity.SpeciesListActivity"/>
         <activity android:name=".view.activity.PlanetListActivity"/>
+        <activity android:name=".view.activity.StarshipListActivity"/>
     </application>
 
 </manifest>

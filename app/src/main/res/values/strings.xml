@@ -9,6 +9,7 @@
     <string name="starships">Starships</string>
     <string name="returnToPreviousScreen">Return to previous screen</string>
 
+
     <!--
         Character Attributes
     -->
@@ -37,6 +38,7 @@
     <string name="planet_rotationperiod">Rotation Period: %1$s</string>
     <string name="planet_surfacewater">Surface Water: %1$s</string>
 
+
     <!--
            Specie Attributes
        -->
@@ -50,6 +52,25 @@
     <string name="specie_averagelifespan">Average lifespan: %1$s</string>
     <string name="specie_designation">Designation: %1$s</string>
     <string name="specie_language">Language: %1$s</string>
+
+
+    <!--
+        Starship Attributes
+    -->
+    <string name="starship_name">Name: %1$s</string>
+    <string name="starship_model">Classification: %1$s</string>
+    <string name="starship_mglt">Eye Colors: %1$s</string>
+    <string name="starship_cargocapacity">Hair Colors: %1$s</string>
+    <string name="starship_consumables">Skin Colors: %1$s</string>
+    <string name="starship_costincredits">Skin Colors: %1$s</string>
+    <string name="starship_manufacturer">Skin Colors: %1$s</string>
+
+    <string name="starship_crew">Average height: %1$s</string>
+    <string name="starship_hyperdriverating">Average lifespan: %1$s</string>
+    <string name="starship_length">Designation: %1$s</string>
+    <string name="starship_maxatmospheringspeed">Language: %1$s</string>
+    <string name="starship_passengers">Language: %1$s</string>
+    <string name="starship_starshipclass">Language: %1$s</string>
 
 
 </resources>
