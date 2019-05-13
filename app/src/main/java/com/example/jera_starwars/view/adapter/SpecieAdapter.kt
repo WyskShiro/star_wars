@@ -23,18 +23,21 @@ class SpecieAdapter(var specieList: ArrayList<Specie>, var context: Context) :
 
 
     override fun onBindViewHolder(viewHolder: SpecieViewHolder, listPosition: Int) {
-        val character = specieList[listPosition]
+        val specie = specieList[listPosition]
 
-        viewHolder.nameTextView.text = character.name
-        viewHolder.classificationTextView.text = character.classification
-        viewHolder.eyeColorsTextView.text = character.eye_colors
-        viewHolder.hairColorsTextView.text = character.hair_colors
-        viewHolder.skinColorsTextView.text = character.skin_colors
+        val res = context.resources
 
-        viewHolder.averageHeightTextView.text = character.average_height
-        viewHolder.averageLifeSpanTextView.text = character.average_lifespan
-        viewHolder.designationTextView.text = character.designation
-        viewHolder.languageTextView.text = character.language
+        viewHolder.nameTextView.text = res.getString(R.string.specie_name, specie.name)
+        viewHolder.classificationTextView.text = res.getString(R.string.specie_classification, specie.classification)
+        viewHolder.eyeColorsTextView.text = res.getString(R.string.specie_eyecolors, specie.eye_colors)
+        viewHolder.hairColorsTextView.text = res.getString(R.string.specie_haircolors, specie.hair_colors)
+        viewHolder.skinColorsTextView.text = res.getString(R.string.specie_skincolors, specie.skin_colors)
+
+        viewHolder.averageHeightTextView.text = res.getString(R.string.specie_averageheight, specie.average_height)
+        viewHolder.averageLifeSpanTextView.text = res.getString(R.string.specie_averagelifespan, specie.average_lifespan)
+        viewHolder.designationTextView.text = res.getString(R.string.specie_designation, specie.designation)
+        viewHolder.languageTextView.text = res.getString(R.string.specie_language, specie.language)
+
 
     }
 

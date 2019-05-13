@@ -1,8 +1,55 @@
 <resources>
+    <!--
+        Resource Names
+    -->
     <string name="app_name">Jera_StarWars</string>
     <string name="characters">Characters</string>
     <string name="species">Species</string>
     <string name="planets">Planets</string>
     <string name="starships">Starships</string>
     <string name="returnToPreviousScreen">Return to previous screen</string>
+
+    <!--
+        Character Attributes
+    -->
+    <string name="character_name">Name: %1$s</string>
+    <string name="character_gender">Gender: %1$s</string>
+    <string name="character_birthyear">Birth Year: %1$s</string>
+    <string name="character_eyecolor">Eye Color: %1$s</string>
+
+    <string name="character_haircolor">Hair Color: %1$s</string>
+    <string name="character_height">Height: %1$s</string>
+    <string name="character_mass">Mass: %1$s</string>
+    <string name="character_skincolor">Skin Color: %1$s</string>
+
+
+    <!--
+        Planet Attributes
+    -->
+    <string name="planet_name">Name: %1$s</string>
+    <string name="planet_climate">Climate: %1$s</string>
+    <string name="planet_population">Population: %1$s</string>
+    <string name="planet_diameter">Diameter: %1$s</string>
+    <string name="planet_terrain">Terrain: %1$s</string>
+
+    <string name="planet_gravity">Gravity: %1$s</string>
+    <string name="planet_orbitalperiod">Orbital Period: %1$s</string>
+    <string name="planet_rotationperiod">Rotation Period: %1$s</string>
+    <string name="planet_surfacewater">Surface Water: %1$s</string>
+
+    <!--
+           Specie Attributes
+       -->
+    <string name="specie_name">Name: %1$s</string>
+    <string name="specie_classification">Classification: %1$s</string>
+    <string name="specie_eyecolors">Eye Colors: %1$s</string>
+    <string name="specie_haircolors">Hair Colors: %1$s</string>
+    <string name="specie_skincolors">Skin Colors: %1$s</string>
+
+    <string name="specie_averageheight">Average height: %1$s</string>
+    <string name="specie_averagelifespan">Average lifespan: %1$s</string>
+    <string name="specie_designation">Designation: %1$s</string>
+    <string name="specie_language">Language: %1$s</string>
+
+
 </resources>

@@ -1,6 +1,7 @@
 package com.example.jera_starwars.view.adapter
 
 import android.content.Context
+import android.content.res.Resources
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -24,20 +25,18 @@ class CharacterAdapter(var characterList: ArrayList<Character>, var context: Con
 
     override fun onBindViewHolder(viewHolder: CharacterViewHolder, listPosition: Int) {
         val character = characterList[listPosition]
+        val res = context.resources
 
-        viewHolder.nameTextView.text = character.name
-        viewHolder.genderTextView.text = character.gender
-        viewHolder.birthYearTextView.text = character.birth_year
-        viewHolder.eyeColorTextView.text = character.eye_color
-        viewHolder.hairColorTextView.text = character.hair_color
-        viewHolder.heightTextView.text = character.height
-        viewHolder.massTextView.text = character.mass
-        viewHolder.skinColorTextView.text = character.skin_color
+        viewHolder.nameTextView.text = res.getString(R.string.character_name, character.name)
+        viewHolder.genderTextView.text = res.getString(R.string.character_gender, character.gender)
+        viewHolder.birthYearTextView.text = res.getString(R.string.character_birthyear, character.birth_year)
+        viewHolder.eyeColorTextView.text = res.getString(R.string.character_eyecolor, character.eye_color)
 
+        viewHolder.hairColorTextView.text = res.getString(R.string.character_haircolor, character.hair_color)
+        viewHolder.heightTextView.text = res.getString(R.string.character_height, character.height)
+        viewHolder.massTextView.text = res.getString(R.string.character_mass, character.mass)
+        viewHolder.skinColorTextView.text = res.getString(R.string.character_skincolor, character.skin_color)
     }
-
-
-
 }
 
 

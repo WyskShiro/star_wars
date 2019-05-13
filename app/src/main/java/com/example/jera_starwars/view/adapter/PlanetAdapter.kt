@@ -24,17 +24,19 @@ class PlanetAdapter(var planetList: ArrayList<Planet>, var context: Context) :
 
     override fun onBindViewHolder(viewHolder: PlanetViewHolder, listPosition: Int) {
         val planet = planetList[listPosition]
+        val res = context.resources
 
-        viewHolder.nameTextView.text = planet.name
-        viewHolder.climateTextView.text = planet.climate
-        viewHolder.populationTextView.text = planet.population
-        viewHolder.terrainTextView.text = planet.terrain
-        viewHolder.diameterTextView.text = planet.diameter
+        viewHolder.nameTextView.text = res.getString(R.string.planet_name, planet.name)
+        viewHolder.climateTextView.text = res.getString(R.string.planet_climate, planet.climate)
+        viewHolder.populationTextView.text = res.getString(R.string.planet_population, planet.population)
+        viewHolder.diameterTextView.text = res.getString(R.string.planet_diameter, planet.diameter)
+        viewHolder.terrainTextView.text = res.getString(R.string.planet_terrain, planet.terrain)
 
-        viewHolder.gravityTextView.text = planet.gravity
-        viewHolder.orbitalPeriodTextView.text = planet.orbital_period
-        viewHolder.rotationPeriodTextView.text = planet.rotation_period
-        viewHolder.surfaceWaterTextView.text = planet.surface_water
+        viewHolder.gravityTextView.text = res.getString(R.string.planet_gravity, planet.gravity)
+        viewHolder.orbitalPeriodTextView.text = res.getString(R.string.planet_orbitalperiod, planet.orbital_period)
+        viewHolder.rotationPeriodTextView.text = res.getString(R.string.planet_rotationperiod, planet.rotation_period)
+        viewHolder.surfaceWaterTextView.text = res.getString(R.string.planet_surfacewater, planet.surface_water)
+
 
     }
 
