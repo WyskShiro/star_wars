@@ -1,15 +1,8 @@
 package com.example.jera_starwars.model.dataclass
 
-import android.support.v7.widget.RecyclerView
-import com.example.jera_starwars.view.adapter.CharacterAdapter
-import com.example.jera_starwars.view.adapter.SpecieAdapter
 import java.io.Serializable
 
 class Specie : Serializable, Resource, Comparable<Specie> {
-    override fun updateResources(resource: Resource, adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>) {
-        (adapter as SpecieAdapter).specieList.add(resource as Specie)
-        (adapter as SpecieAdapter).specieList.sort()
-    }
 
     override fun compareTo(other: Specie): Int {
         return name.compareTo(other.name)

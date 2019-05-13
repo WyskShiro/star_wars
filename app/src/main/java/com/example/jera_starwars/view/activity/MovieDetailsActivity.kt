@@ -56,19 +56,19 @@ class MovieDetailsActivity : AppCompatActivity() {
 
 
         charactersButton.setOnClickListener {
-            val intentMovieResources = Intent(this, MovieResourcesListActivity::class.java)
+            val intentMovieResources = Intent(this, CharactersListActivity::class.java)
             intentMovieResources.putExtra("characters_list", movie!!.characters as ArrayList<String>)
             startActivity(intentMovieResources)
         }
 
         speciesButton.setOnClickListener {
-            val intentMovieResources = Intent(this, MovieResourcesListActivity::class.java)
+            val intentMovieResources = Intent(this, SpeciesListActivity::class.java)
             intentMovieResources.putExtra("species_list", movie!!.species as ArrayList<String>)
             startActivity(intentMovieResources)
         }
 
         planetsButton.setOnClickListener {
-            val intentMovieResources = Intent(this, MovieResourcesListActivity::class.java)
+            val intentMovieResources = Intent(this, PlanetListActivity::class.java)
             intentMovieResources.putExtra("planets_list", movie!!.planets as ArrayList<String>)
             startActivity(intentMovieResources)
         }

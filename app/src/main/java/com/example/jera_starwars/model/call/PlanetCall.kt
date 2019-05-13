@@ -2,7 +2,6 @@ package com.example.jera_starwars.model.call
 
 import com.example.jera_starwars.model.Retrofit
 import com.example.jera_starwars.model.dataclass.Planet
-import com.example.jera_starwars.model.dataclass.Specie
 import com.example.jera_starwars.presenter.ResourceListPresenter
 import retrofit2.Call
 import retrofit2.Callback

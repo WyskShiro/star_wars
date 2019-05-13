@@ -7,22 +7,20 @@ import android.support.v7.widget.RecyclerView
 import android.view.MenuItem
 import android.widget.TextView
 import com.example.jera_starwars.R
-import com.example.jera_starwars.model.dataclass.Character
-import com.example.jera_starwars.model.dataclass.Planet
-import com.example.jera_starwars.model.dataclass.Resource
-import com.example.jera_starwars.model.dataclass.Specie
 import com.example.jera_starwars.presenter.ResourceListPresenter
-import com.example.jera_starwars.view.adapter.CharacterAdapter
-import com.example.jera_starwars.view.adapter.PlanetAdapter
-import com.example.jera_starwars.view.adapter.SpecieAdapter
 import com.example.jera_starwars.view.viewcontract.ResourceViewContract
 
-class MovieResourcesListActivity : AppCompatActivity(), ResourceViewContract {
+/***
+ * Parte genérica de toda listagem dos recursos de um filme
+ * Para evitar criar uma Activity por completa para cada recurso -> Reaproveitar o que é "genérico"
+ */
+abstract class MovieResourcesListActivity : AppCompatActivity(), ResourceViewContract {
 
     lateinit var resourcesTitleTextView: TextView
-    private lateinit var resourcesList: ArrayList<String>
-    private lateinit var resourcesRecyclerView: RecyclerView
-    private lateinit var resourceListPresenter: ResourceListPresenter
+    lateinit var resourcesList: ArrayList<String>
+    lateinit var resourcesRecyclerView: RecyclerView
+    lateinit var resourceListPresenter: ResourceListPresenter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,37 +34,8 @@ class MovieResourcesListActivity : AppCompatActivity(), ResourceViewContract {
         resourcesRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         //TODO mostrar um loading
-        resourceListPresenter= ResourceListPresenter(this)
-
-        if (intent.hasExtra("characters_list")) {
-            resourcesList = intent.extras.getStringArrayList("characters_list")
-            resourcesTitleTextView.text = getString(R.string.characters)
-            resourcesRecyclerView.adapter = CharacterAdapter(ArrayList(), this)
-
-            resourceListPresenter.getAllCharactersFromThisMovie(resourcesList)
-
-        } else if (intent.hasExtra("species_list")) {
-            resourcesList = intent.extras.getStringArrayList("species_list")
-            resourcesTitleTextView.text = getString(R.string.species)
-            resourcesRecyclerView.adapter = SpecieAdapter(ArrayList(), this)
-
-            resourceListPresenter.getAllSpeciesFromThisMovie(resourcesList)
-        } else if (intent.hasExtra("planets_list")) {
-            resourcesList = intent.extras.getStringArrayList("planets_list")
-            resourcesTitleTextView.text = getString(R.string.planets)
-            resourcesRecyclerView.adapter = PlanetAdapter(ArrayList(), this)
-
-            resourceListPresenter.getAllPlanetsFromThisMovie(resourcesList)
-        }
-
 
     }
-
-    override fun updateResourcesOnRecyclerView(resource: Resource) {
-        resource.updateResources(resource, resourcesRecyclerView.adapter!!)
-        resourcesRecyclerView.adapter!!.notifyDataSetChanged()
-    }
-
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         finish()

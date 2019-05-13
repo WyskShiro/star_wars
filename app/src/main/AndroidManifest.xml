@@ -14,6 +14,8 @@
             android:theme="@style/AppTheme">
         <activity android:name=".view.activity.MovieResourcesListActivity">
         </activity>
+        <activity android:name=".view.activity.CharactersListActivity">
+        </activity>
         <activity android:name=".view.activity.MovieDetailsActivity">
         </activity>
         <activity android:name=".view.activity.MovieListActivity">
@@ -23,6 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".view.activity.SpeciesListActivity"/>
+        <activity android:name=".view.activity.PlanetListActivity"/>
     </application>
 
 </manifest>

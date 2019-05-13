@@ -1,15 +1,8 @@
 package com.example.jera_starwars.model.dataclass
 
-import android.support.v7.widget.RecyclerView
-import com.example.jera_starwars.view.adapter.PlanetAdapter
-import com.example.jera_starwars.view.adapter.SpecieAdapter
 import java.io.Serializable
 
 class Planet : Serializable, Resource, Comparable<Planet> {
-    override fun updateResources(resource: Resource, adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>) {
-        (adapter as PlanetAdapter).planetList.add(resource as Planet)
-        (adapter as PlanetAdapter).planetList.sort()
-    }
 
     lateinit var name: String
     lateinit var climate: String

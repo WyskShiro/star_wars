@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.jera_starwars.R
 import com.example.jera_starwars.model.dataclass.Planet
-import com.example.jera_starwars.model.dataclass.Specie
 import com.example.jera_starwars.view.viewholder.PlanetViewHolder
-import com.example.jera_starwars.view.viewholder.SpecieViewHolder
 
 class PlanetAdapter(var planetList: ArrayList<Planet>, var context: Context) :
     RecyclerView.Adapter<PlanetViewHolder>() {
