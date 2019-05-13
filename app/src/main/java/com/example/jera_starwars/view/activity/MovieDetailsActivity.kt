@@ -28,7 +28,7 @@ class MovieDetailsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_movie_details)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
-        supportActionBar!!.title = getString(R.string.returnToPreviousScreen)
+        supportActionBar!!.title = getString(R.string.moviedetails)
 
         nameTextView = findViewById(R.id.moviename_textview)
         directorTextView = findViewById(R.id.moviedirector_textview)

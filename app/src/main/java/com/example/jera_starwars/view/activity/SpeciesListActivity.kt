@@ -11,12 +11,12 @@ class SpeciesListActivity : MovieResourcesListActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar!!.title = getString(R.string.species)
 
         resourceListPresenter= ResourceListPresenter(this)
 
         if (intent.hasExtra("species_list")) {
             resourcesList = intent.extras.getStringArrayList("species_list")
-            resourcesTitleTextView.text = getString(R.string.species)
             resourcesRecyclerView.adapter = SpecieAdapter(ArrayList(), this)
             resourceListPresenter.getAllSpeciesFromThisMovie(resourcesList)
         }

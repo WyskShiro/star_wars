@@ -11,12 +11,12 @@ class PlanetListActivity : MovieResourcesListActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar!!.title = getString(R.string.planets)
 
         resourceListPresenter= ResourceListPresenter(this)
 
         if (intent.hasExtra("planets_list")) {
             resourcesList = intent.extras.getStringArrayList("planets_list")
-            resourcesTitleTextView.text = getString(R.string.planets)
             resourcesRecyclerView.adapter = PlanetAdapter(ArrayList(), this)
 
             resourceListPresenter.getAllPlanetsFromThisMovie(resourcesList)

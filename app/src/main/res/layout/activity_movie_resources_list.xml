@@ -8,17 +8,6 @@
         android:background="@drawable/background_image"
         tools:context=".view.activity.MovieResourcesListActivity">
 
-    <TextView
-            android:id="@+id/resourcestitle_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:text="*********************"
-    />
-
     <android.support.v7.widget.RecyclerView
             android:id="@+id/resources_recylerview"
             android:layout_width="match_parent"

@@ -16,7 +16,6 @@ import com.example.jera_starwars.view.viewcontract.ResourceViewContract
  */
 abstract class MovieResourcesListActivity : AppCompatActivity(), ResourceViewContract {
 
-    lateinit var resourcesTitleTextView: TextView
     lateinit var resourcesList: ArrayList<String>
     lateinit var resourcesRecyclerView: RecyclerView
     lateinit var resourceListPresenter: ResourceListPresenter
@@ -27,9 +26,8 @@ abstract class MovieResourcesListActivity : AppCompatActivity(), ResourceViewCon
         setContentView(R.layout.activity_movie_resources_list)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
-        supportActionBar!!.title = getString(R.string.returnToPreviousScreen)
 
-        resourcesTitleTextView = findViewById(R.id.resourcestitle_textview)
+
         resourcesRecyclerView = findViewById(R.id.resources_recylerview)
         resourcesRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 

@@ -11,12 +11,12 @@ class CharactersListActivity : MovieResourcesListActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar!!.title = getString(R.string.characters)
 
         resourceListPresenter= ResourceListPresenter(this)
 
         if (intent.hasExtra("characters_list")) {
             resourcesList = intent.extras.getStringArrayList("characters_list")
-            resourcesTitleTextView.text = getString(R.string.characters)
             resourcesRecyclerView.adapter = CharacterAdapter(ArrayList(), this)
             resourceListPresenter.getAllCharactersFromThisMovie(resourcesList)
         }

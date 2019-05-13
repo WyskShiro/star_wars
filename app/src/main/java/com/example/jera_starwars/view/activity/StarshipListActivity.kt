@@ -13,12 +13,12 @@ class StarshipListActivity : MovieResourcesListActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar!!.title = getString(R.string.starships)
 
         resourceListPresenter= ResourceListPresenter(this)
 
         if (intent.hasExtra("starships_list")) {
             resourcesList = intent.extras.getStringArrayList("starships_list")
-            resourcesTitleTextView.text = getString(R.string.starships)
             resourcesRecyclerView.adapter = StarshipAdapter(ArrayList(), this)
 
             resourceListPresenter.getAllStarshipsFromThisMovie(resourcesList)
