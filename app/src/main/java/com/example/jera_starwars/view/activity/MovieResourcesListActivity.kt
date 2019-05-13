@@ -57,8 +57,10 @@ class MovieResourcesListActivity : AppCompatActivity(), ResourceViewContract {
     override fun updateResourcesOnRecyclerView(resource: Resource) {
         if (resource is Character) {
             (resourcesRecyclerView.adapter as CharacterAdapter).characterList.add(resource)
+            (resourcesRecyclerView.adapter as CharacterAdapter).characterList.sort()
         } else if (resource is Specie) {
             (resourcesRecyclerView.adapter as SpecieAdapter).specieList.add(resource)
+            (resourcesRecyclerView.adapter as SpecieAdapter).specieList.sort()
         }
 
         resourcesRecyclerView.adapter!!.notifyDataSetChanged()

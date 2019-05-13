@@ -2,7 +2,12 @@ package com.example.jera_starwars.model.dataclass
 
 import java.io.Serializable
 
-class Specie : Serializable, Resource {
+class Specie : Serializable, Resource, Comparable<Specie> {
+
+    override fun compareTo(other: Specie): Int {
+        return name.compareTo(other.name)
+    }
+
     lateinit var name: String
     lateinit var classification: String
     lateinit var eye_colors: String
