@@ -20,6 +20,7 @@ class MovieDetailsActivity : AppCompatActivity() {
 
     lateinit var charactersButton: Button
     lateinit var speciesButton: Button
+    lateinit var planetsButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +38,7 @@ class MovieDetailsActivity : AppCompatActivity() {
 
         charactersButton = findViewById(R.id.characters_button)
         speciesButton = findViewById(R.id.species_button)
+        planetsButton = findViewById(R.id.planets_button)
 
         var movie: Movie? = null
 
@@ -62,6 +64,12 @@ class MovieDetailsActivity : AppCompatActivity() {
         speciesButton.setOnClickListener {
             val intentMovieResources = Intent(this, MovieResourcesListActivity::class.java)
             intentMovieResources.putExtra("species_list", movie!!.species as ArrayList<String>)
+            startActivity(intentMovieResources)
+        }
+
+        planetsButton.setOnClickListener {
+            val intentMovieResources = Intent(this, MovieResourcesListActivity::class.java)
+            intentMovieResources.putExtra("planets_list", movie!!.planets as ArrayList<String>)
             startActivity(intentMovieResources)
         }
 

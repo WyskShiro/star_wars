@@ -1,6 +1,7 @@
 package com.example.jera_starwars.presenter
 
 import com.example.jera_starwars.model.call.CharacterCall
+import com.example.jera_starwars.model.call.PlanetCall
 import com.example.jera_starwars.model.call.SpecieCall
 import com.example.jera_starwars.model.dataclass.Character
 import com.example.jera_starwars.model.dataclass.Resource
@@ -16,6 +17,16 @@ class ResourceListPresenter(private val resourceViewContract: ResourceViewContra
             characterCall.callGetCharacterWithId(characterId)
         }
     }
+
+    fun getAllPlanetsFromThisMovie(resourcesList: ArrayList<String>) {
+        val array = getResourcesId(resourcesList)
+
+        array.forEach { planetId ->
+            val planetCall = PlanetCall(this)
+            planetCall.callGetPlanetWithId(planetId)
+        }
+    }
+
 
     fun getAllSpeciesFromThisMovie(resourcesList: ArrayList<String>) {
         val array = getResourcesId(resourcesList)
@@ -39,4 +50,6 @@ class ResourceListPresenter(private val resourceViewContract: ResourceViewContra
             }
         }
     }
+
+
 }

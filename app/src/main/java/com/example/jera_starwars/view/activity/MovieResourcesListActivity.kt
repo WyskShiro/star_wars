@@ -8,10 +8,12 @@ import android.view.MenuItem
 import android.widget.TextView
 import com.example.jera_starwars.R
 import com.example.jera_starwars.model.dataclass.Character
+import com.example.jera_starwars.model.dataclass.Planet
 import com.example.jera_starwars.model.dataclass.Resource
 import com.example.jera_starwars.model.dataclass.Specie
 import com.example.jera_starwars.presenter.ResourceListPresenter
 import com.example.jera_starwars.view.adapter.CharacterAdapter
+import com.example.jera_starwars.view.adapter.PlanetAdapter
 import com.example.jera_starwars.view.adapter.SpecieAdapter
 import com.example.jera_starwars.view.viewcontract.ResourceViewContract
 
@@ -49,20 +51,19 @@ class MovieResourcesListActivity : AppCompatActivity(), ResourceViewContract {
             resourcesRecyclerView.adapter = SpecieAdapter(ArrayList(), this)
 
             resourceListPresenter.getAllSpeciesFromThisMovie(resourcesList)
+        } else if (intent.hasExtra("planets_list")) {
+            resourcesList = intent.extras.getStringArrayList("planets_list")
+            resourcesTitleTextView.text = getString(R.string.planets)
+            resourcesRecyclerView.adapter = PlanetAdapter(ArrayList(), this)
+
+            resourceListPresenter.getAllPlanetsFromThisMovie(resourcesList)
         }
 
 
     }
 
     override fun updateResourcesOnRecyclerView(resource: Resource) {
-        if (resource is Character) {
-            (resourcesRecyclerView.adapter as CharacterAdapter).characterList.add(resource)
-            (resourcesRecyclerView.adapter as CharacterAdapter).characterList.sort()
-        } else if (resource is Specie) {
-            (resourcesRecyclerView.adapter as SpecieAdapter).specieList.add(resource)
-            (resourcesRecyclerView.adapter as SpecieAdapter).specieList.sort()
-        }
-
+        resource.updateResources(resource, resourcesRecyclerView.adapter!!)
         resourcesRecyclerView.adapter!!.notifyDataSetChanged()
     }
 
