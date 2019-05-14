@@ -58,19 +58,19 @@
         Starship Attributes
     -->
     <string name="starship_name">Name: %1$s</string>
-    <string name="starship_model">Classification: %1$s</string>
-    <string name="starship_mglt">Eye Colors: %1$s</string>
-    <string name="starship_cargocapacity">Hair Colors: %1$s</string>
-    <string name="starship_consumables">Skin Colors: %1$s</string>
-    <string name="starship_costincredits">Skin Colors: %1$s</string>
-    <string name="starship_manufacturer">Skin Colors: %1$s</string>
+    <string name="starship_model">Model: %1$s</string>
+    <string name="starship_mglt">MGLT: %1$s</string>
+    <string name="starship_cargocapacity">Cargo capacity: %1$s</string>
+    <string name="starship_consumables">Consumables: %1$s</string>
+    <string name="starship_costincredits">Cost in credits: %1$s</string>
+    <string name="starship_manufacturer">Manufacturer: %1$s</string>
 
-    <string name="starship_crew">Average height: %1$s</string>
-    <string name="starship_hyperdriverating">Average lifespan: %1$s</string>
-    <string name="starship_length">Designation: %1$s</string>
-    <string name="starship_maxatmospheringspeed">Language: %1$s</string>
-    <string name="starship_passengers">Language: %1$s</string>
-    <string name="starship_starshipclass">Language: %1$s</string>
+    <string name="starship_crew">Crew: %1$s</string>
+    <string name="starship_hyperdriverating">Hyper Drive Rating: %1$s</string>
+    <string name="starship_length">Length: %1$s</string>
+    <string name="starship_maxatmospheringspeed">Max Atmosphering Speed: %1$s</string>
+    <string name="starship_passengers">Passengers: %1$s</string>
+    <string name="starship_starshipclass">Starship class: %1$s</string>
 
 
 </resources>
