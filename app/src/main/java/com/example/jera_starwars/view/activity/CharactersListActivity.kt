@@ -1,6 +1,8 @@
 package com.example.jera_starwars.view.activity
 
 import android.os.Bundle
+import android.view.View
+import android.widget.ProgressBar
 import com.example.jera_starwars.R
 import com.example.jera_starwars.model.dataclass.Character
 import com.example.jera_starwars.model.dataclass.Resource
@@ -22,6 +24,7 @@ class CharactersListActivity : MovieResourcesListActivity() {
 
     override fun updateResourcesOnRecyclerView(resource: Resource) {
         if (resource is Character) {
+            progressbar.visibility = View.GONE
             val characterAdater = resourcesRecyclerView.adapter as CharacterAdapter
 
             characterAdater.characterList.add(resource)

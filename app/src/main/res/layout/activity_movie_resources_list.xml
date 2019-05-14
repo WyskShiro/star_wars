@@ -8,6 +8,14 @@
         android:background="@drawable/background_image"
         tools:context=".view.activity.MovieResourcesListActivity">
 
+    <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+    >
+    </ProgressBar>
+
     <android.support.v7.widget.RecyclerView
             android:id="@+id/resources_recylerview"
             android:layout_width="match_parent"

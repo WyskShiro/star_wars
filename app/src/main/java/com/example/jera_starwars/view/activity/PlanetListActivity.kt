@@ -1,6 +1,7 @@
 package com.example.jera_starwars.view.activity
 
 import android.os.Bundle
+import android.view.View
 import com.example.jera_starwars.R
 import com.example.jera_starwars.model.dataclass.Movie
 import com.example.jera_starwars.model.dataclass.Planet
@@ -23,6 +24,7 @@ class PlanetListActivity : MovieResourcesListActivity() {
 
     override fun updateResourcesOnRecyclerView(resource: Resource) {
         if (resource is Planet) {
+            progressbar.visibility = View.GONE
             val planetAdapter = resourcesRecyclerView.adapter as PlanetAdapter
 
             planetAdapter.planetList.add(resource)

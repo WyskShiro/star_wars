@@ -37,12 +37,10 @@ class MovieDetailsActivity : AppCompatActivity() {
         releaseDateTextView = findViewById(R.id.moviereleasedate_textview)
         moviePosterImageView = findViewById(R.id.movieposter_imageview)
 
-
         charactersButton = findViewById(R.id.characters_button)
         speciesButton = findViewById(R.id.species_button)
         planetsButton = findViewById(R.id.planets_button)
         starshipsButton = findViewById(R.id.starships_button)
-
 
         if (intent.hasExtra("movie")) {
             movie = intent.extras.getSerializable("movie") as Movie
