@@ -5,9 +5,10 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.MenuItem
-import android.widget.TextView
 import com.example.jera_starwars.R
+import com.example.jera_starwars.model.dataclass.Movie
 import com.example.jera_starwars.presenter.ResourceListPresenter
+import com.example.jera_starwars.view.adapter.StarshipAdapter
 import com.example.jera_starwars.view.viewcontract.ResourceViewContract
 
 /***
@@ -19,6 +20,7 @@ abstract class MovieResourcesListActivity : AppCompatActivity(), ResourceViewCon
     lateinit var resourcesList: ArrayList<String>
     lateinit var resourcesRecyclerView: RecyclerView
     lateinit var resourceListPresenter: ResourceListPresenter
+    lateinit var movie: Movie
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,9 +29,12 @@ abstract class MovieResourcesListActivity : AppCompatActivity(), ResourceViewCon
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
 
-
         resourcesRecyclerView = findViewById(R.id.resources_recylerview)
         resourcesRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+        if (intent.hasExtra("movie")) {
+            movie = intent.extras.getSerializable("movie") as Movie
+        }
 
         //TODO mostrar um loading
 

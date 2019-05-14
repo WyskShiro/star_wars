@@ -14,14 +14,11 @@ class MovieCall(val movieListPresenter: MovieListPresenter) {
         val call = retrofit.getAllMovies()
 
         call.enqueue(object : Callback<MovieJSON> {
-            override fun onFailure(call: Call<MovieJSON>, t: Throwable) {
-                //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
+            override fun onFailure(call: Call<MovieJSON>, t: Throwable) {}
 
             override fun onResponse(call: Call<MovieJSON>, response: Response<MovieJSON>) {
                 movieListPresenter.setAllMovies(response.body()!!.results)
             }
         })
-
     }
 }

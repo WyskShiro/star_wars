@@ -14,8 +14,7 @@ class SpecieCall(val resourceListPresenter: ResourceListPresenter) {
         val call = retrofit.getSpecieWithId(specieId)
 
         call.enqueue(object : Callback<Specie> {
-            override fun onFailure(call: Call<Specie>, t: Throwable) {
-            }
+            override fun onFailure(call: Call<Specie>, t: Throwable) {}
 
             override fun onResponse(call: Call<Specie>, response: Response<Specie>) {
                 resourceListPresenter.insertResourceOnList(response.body())

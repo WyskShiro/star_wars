@@ -1,7 +1,6 @@
 package com.example.jera_starwars.view.adapter
 
 import android.content.Context
-import android.content.res.Resources
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup

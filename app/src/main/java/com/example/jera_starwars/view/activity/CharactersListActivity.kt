@@ -15,20 +15,19 @@ class CharactersListActivity : MovieResourcesListActivity() {
 
         resourceListPresenter= ResourceListPresenter(this)
 
-        if (intent.hasExtra("characters_list")) {
-            resourcesList = intent.extras.getStringArrayList("characters_list")
-            resourcesRecyclerView.adapter = CharacterAdapter(ArrayList(), this)
-            resourceListPresenter.getAllCharactersFromThisMovie(resourcesList)
-        }
+        resourcesList = movie.characters as ArrayList<String>
+        resourcesRecyclerView.adapter = CharacterAdapter(ArrayList(), this)
+        resourceListPresenter.getAllCharactersFromThisMovie(resourcesList)
     }
 
     override fun updateResourcesOnRecyclerView(resource: Resource) {
         if (resource is Character) {
-            (resourcesRecyclerView.adapter as CharacterAdapter).characterList.add(resource)
-            (resourcesRecyclerView.adapter as CharacterAdapter).characterList.sort()
-        }
+            val characterAdater = resourcesRecyclerView.adapter as CharacterAdapter
 
-        resourcesRecyclerView.adapter!!.notifyDataSetChanged()
+            characterAdater.characterList.add(resource)
+            characterAdater.characterList.sort()
+            characterAdater.notifyDataSetChanged()
+        }
     }
 
 }

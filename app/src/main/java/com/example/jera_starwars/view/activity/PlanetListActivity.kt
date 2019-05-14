@@ -2,6 +2,7 @@ package com.example.jera_starwars.view.activity
 
 import android.os.Bundle
 import com.example.jera_starwars.R
+import com.example.jera_starwars.model.dataclass.Movie
 import com.example.jera_starwars.model.dataclass.Planet
 import com.example.jera_starwars.model.dataclass.Resource
 import com.example.jera_starwars.presenter.ResourceListPresenter
@@ -15,21 +16,19 @@ class PlanetListActivity : MovieResourcesListActivity() {
 
         resourceListPresenter= ResourceListPresenter(this)
 
-        if (intent.hasExtra("planets_list")) {
-            resourcesList = intent.extras.getStringArrayList("planets_list")
-            resourcesRecyclerView.adapter = PlanetAdapter(ArrayList(), this)
-
-            resourceListPresenter.getAllPlanetsFromThisMovie(resourcesList)
-        }
+        resourcesList = movie.planets as ArrayList<String>
+        resourcesRecyclerView.adapter = PlanetAdapter(ArrayList(), this)
+        resourceListPresenter.getAllPlanetsFromThisMovie(resourcesList)
     }
 
     override fun updateResourcesOnRecyclerView(resource: Resource) {
         if (resource is Planet) {
-            (resourcesRecyclerView.adapter as PlanetAdapter).planetList.add(resource)
-            (resourcesRecyclerView.adapter as PlanetAdapter).planetList.sort()
-        }
+            val planetAdapter = resourcesRecyclerView.adapter as PlanetAdapter
 
-        resourcesRecyclerView.adapter!!.notifyDataSetChanged()
+            planetAdapter.planetList.add(resource)
+            planetAdapter.planetList.sort()
+            resourcesRecyclerView.adapter!!.notifyDataSetChanged()
+        }
     }
 
 }

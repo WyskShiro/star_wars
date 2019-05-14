@@ -8,18 +8,17 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class CharacterCall(val resourceListPresenter: ResourceListPresenter) {
+
     fun callGetCharacterWithId(characterId: String) {
         val retrofit = Retrofit().characterService()
         val call = retrofit.getCharacterWithId(characterId)
 
         call.enqueue(object : Callback<Character> {
-            override fun onFailure(call: Call<Character>, t: Throwable) {
-            }
+            override fun onFailure(call: Call<Character>, t: Throwable) {}
 
             override fun onResponse(call: Call<Character>, response: Response<Character>) {
                 resourceListPresenter.insertResourceOnList(response.body())
             }
         })
-
     }
 }

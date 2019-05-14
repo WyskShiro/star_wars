@@ -10,27 +10,21 @@ import com.example.jera_starwars.view.viewcontract.ResourceViewContract
 class ResourceListPresenter(private val resourceViewContract: ResourceViewContract) {
 
     fun getAllCharactersFromThisMovie(resourcesList: ArrayList<String>) {
-        val array = getResourcesId(resourcesList)
-
-        array.forEach { characterId ->
+        resourcesList.forEach { characterId ->
             val characterCall = CharacterCall(this)
             characterCall.callGetCharacterWithId(characterId)
         }
     }
 
     fun getAllStarshipsFromThisMovie(resourcesList: ArrayList<String>) {
-        val array = getResourcesId(resourcesList)
-
-        array.forEach { starshipId ->
+        resourcesList.forEach { starshipId ->
             val starshipCall = StarshipCall(this)
             starshipCall.callGetStarshipWithId(starshipId)
         }
     }
 
     fun getAllPlanetsFromThisMovie(resourcesList: ArrayList<String>) {
-        val array = getResourcesId(resourcesList)
-
-        array.forEach { planetId ->
+        resourcesList.forEach { planetId ->
             val planetCall = PlanetCall(this)
             planetCall.callGetPlanetWithId(planetId)
         }
@@ -38,27 +32,17 @@ class ResourceListPresenter(private val resourceViewContract: ResourceViewContra
 
 
     fun getAllSpeciesFromThisMovie(resourcesList: ArrayList<String>) {
-        val array = getResourcesId(resourcesList)
-
-        array.forEach { specieId ->
+        resourcesList.forEach { specieId ->
             val specieCall = SpecieCall(this)
             specieCall.callGetSpecieWithId(specieId)
         }
     }
+
 
     fun insertResourceOnList(resource: Resource?) {
         if (resource != null) {
             resourceViewContract.updateResourcesOnRecyclerView(resource)
         }
     }
-
-    private fun getResourcesId(resourcesList: ArrayList<String>): List<String>{
-        return resourcesList.map {characterLink ->
-            characterLink.filter {
-                it.isDigit()
-            }
-        }
-    }
-
 
 }

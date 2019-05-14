@@ -15,8 +15,7 @@ class PlanetCall(val resourceListPresenter: ResourceListPresenter) {
         val call = retrofit.getPlanetWithId(planetId)
 
         call.enqueue(object : Callback<Planet> {
-            override fun onFailure(call: Call<Planet>, t: Throwable) {
-            }
+            override fun onFailure(call: Call<Planet>, t: Throwable) {}
 
             override fun onResponse(call: Call<Planet>, response: Response<Planet>) {
                 resourceListPresenter.insertResourceOnList(response.body())

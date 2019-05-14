@@ -5,9 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.jera_starwars.R
-import com.example.jera_starwars.model.dataclass.Planet
 import com.example.jera_starwars.model.dataclass.Starship
-import com.example.jera_starwars.view.viewholder.PlanetViewHolder
 import com.example.jera_starwars.view.viewholder.StarshipViewHolder
 
 class StarshipAdapter(var starshipList: ArrayList<Starship>, var context: Context) :

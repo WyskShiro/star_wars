@@ -22,6 +22,7 @@ class MovieDetailsActivity : AppCompatActivity() {
     lateinit var speciesButton: Button
     lateinit var planetsButton: Button
     lateinit var starshipsButton: Button
+    lateinit var movie: Movie
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +43,6 @@ class MovieDetailsActivity : AppCompatActivity() {
         planetsButton = findViewById(R.id.planets_button)
         starshipsButton = findViewById(R.id.starships_button)
 
-        var movie: Movie? = null
 
         if (intent.hasExtra("movie")) {
             movie = intent.extras.getSerializable("movie") as Movie
@@ -58,29 +58,27 @@ class MovieDetailsActivity : AppCompatActivity() {
 
 
         charactersButton.setOnClickListener {
-            val intentMovieResources = Intent(this, CharactersListActivity::class.java)
-            intentMovieResources.putExtra("characters_list", movie!!.characters as ArrayList<String>)
-            startActivity(intentMovieResources)
+            passMovieToNextActivity(CharactersListActivity::class.java)
         }
 
         speciesButton.setOnClickListener {
-            val intentMovieResources = Intent(this, SpeciesListActivity::class.java)
-            intentMovieResources.putExtra("species_list", movie!!.species as ArrayList<String>)
-            startActivity(intentMovieResources)
+            passMovieToNextActivity(SpeciesListActivity::class.java)
         }
 
         planetsButton.setOnClickListener {
-            val intentMovieResources = Intent(this, PlanetListActivity::class.java)
-            intentMovieResources.putExtra("planets_list", movie!!.planets as ArrayList<String>)
-            startActivity(intentMovieResources)
+            passMovieToNextActivity(PlanetListActivity::class.java)
         }
 
         starshipsButton.setOnClickListener {
-            val intentMovieResources = Intent(this, StarshipListActivity::class.java)
-            intentMovieResources.putExtra("starships_list", movie!!.starships as ArrayList<String>)
-            startActivity(intentMovieResources)
+            passMovieToNextActivity(StarshipListActivity::class.java)
         }
+    }
 
+
+    private fun passMovieToNextActivity(activityClass: Class<out MovieResourcesListActivity>) {
+        val intentMovieResources = Intent(this, activityClass)
+        intentMovieResources.putExtra("movie", movie)
+        startActivity(intentMovieResources)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -4,16 +4,16 @@ import java.io.Serializable
 
 class Planet : Serializable, Resource, Comparable<Planet> {
 
-    lateinit var name: String
-    lateinit var climate: String
-    lateinit var population: String
-    lateinit var terrain: String
-    lateinit var diameter: String
+    lateinit var name: String private set
+    lateinit var climate: String private set
+    lateinit var population: String private set
+    lateinit var terrain: String private set
+    lateinit var diameter: String private set
 
-    lateinit var gravity: String
-    lateinit var orbital_period: String
-    lateinit var rotation_period: String
-    lateinit var surface_water: String
+    lateinit var gravity: String private set
+    lateinit var orbital_period: String private set
+    lateinit var rotation_period: String private set
+    lateinit var surface_water: String private set
 
     override fun compareTo(other: Planet): Int {
         return name.compareTo(other.name)
