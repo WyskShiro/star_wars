@@ -11,20 +11,16 @@ import com.example.jera_starwars.view.viewholder.SpecieViewHolder
 class SpecieAdapter(var specieList: ArrayList<Specie>, var context: Context) :
     RecyclerView.Adapter<SpecieViewHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): SpecieViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.itemcard_specie, parent, false)
 
         return SpecieViewHolder(view)
     }
 
-
     override fun getItemCount(): Int = specieList.size
-
 
     override fun onBindViewHolder(viewHolder: SpecieViewHolder, listPosition: Int) {
         val specie = specieList[listPosition]
-
         val res = context.resources
 
         viewHolder.nameTextView.text = res.getString(R.string.specie_name, specie.name)
@@ -37,8 +33,6 @@ class SpecieAdapter(var specieList: ArrayList<Specie>, var context: Context) :
         viewHolder.averageLifeSpanTextView.text = res.getString(R.string.specie_averagelifespan, specie.average_lifespan)
         viewHolder.designationTextView.text = res.getString(R.string.specie_designation, specie.designation)
         viewHolder.languageTextView.text = res.getString(R.string.specie_language, specie.language)
-
-
     }
 
 }

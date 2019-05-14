@@ -38,9 +38,6 @@ abstract class MovieResourcesListActivity : AppCompatActivity(), ResourceViewCon
         if (intent.hasExtra("movie")) {
             movie = intent.extras.getSerializable("movie") as Movie
         }
-
-        //TODO mostrar um loading
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

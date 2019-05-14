@@ -11,16 +11,13 @@ import com.example.jera_starwars.view.viewholder.PlanetViewHolder
 class PlanetAdapter(var planetList: ArrayList<Planet>, var context: Context) :
     RecyclerView.Adapter<PlanetViewHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): PlanetViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.itemcard_planet, parent, false)
 
         return PlanetViewHolder(view)
     }
 
-
     override fun getItemCount(): Int = planetList.size
-
 
     override fun onBindViewHolder(viewHolder: PlanetViewHolder, listPosition: Int) {
         val planet = planetList[listPosition]
@@ -36,8 +33,6 @@ class PlanetAdapter(var planetList: ArrayList<Planet>, var context: Context) :
         viewHolder.orbitalPeriodTextView.text = res.getString(R.string.planet_orbitalperiod, planet.orbital_period)
         viewHolder.rotationPeriodTextView.text = res.getString(R.string.planet_rotationperiod, planet.rotation_period)
         viewHolder.surfaceWaterTextView.text = res.getString(R.string.planet_surfacewater, planet.surface_water)
-
-
     }
 
 }

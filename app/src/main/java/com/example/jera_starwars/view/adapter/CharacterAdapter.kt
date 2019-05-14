@@ -18,9 +18,7 @@ class CharacterAdapter(var characterList: ArrayList<Character>, var context: Con
         return CharacterViewHolder(view)
     }
 
-
     override fun getItemCount(): Int = characterList.size
-
 
     override fun onBindViewHolder(viewHolder: CharacterViewHolder, listPosition: Int) {
         val character = characterList[listPosition]

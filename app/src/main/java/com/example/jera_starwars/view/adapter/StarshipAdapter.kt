@@ -11,16 +11,13 @@ import com.example.jera_starwars.view.viewholder.StarshipViewHolder
 class StarshipAdapter(var starshipList: ArrayList<Starship>, var context: Context) :
     RecyclerView.Adapter<StarshipViewHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): StarshipViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.itemcard_starship, parent, false)
 
         return StarshipViewHolder(view)
     }
 
-
     override fun getItemCount(): Int = starshipList.size
-
 
     override fun onBindViewHolder(viewHolder: StarshipViewHolder, listPosition: Int) {
         val starship = starshipList[listPosition]
@@ -40,8 +37,6 @@ class StarshipAdapter(var starshipList: ArrayList<Starship>, var context: Contex
         viewHolder.maxAtmospheringSpeedTextView.text = res.getString(R.string.starship_maxatmospheringspeed, starship.max_atmosphering_speed)
         viewHolder.passengersTextView.text = res.getString(R.string.starship_passengers, starship.passengers)
         viewHolder.starshipClassTextView.text = res.getString(R.string.starship_starshipclass, starship.starship_class)
-
-
     }
 
 }

@@ -38,12 +38,28 @@ class Movie : Serializable {
         6 to R.drawable.episode6_poster,
         7 to R.drawable.episode7_poster)
 
+
+    /**
+     * Pega a url e extrai só a parte que tem o ID do recurso
+     * */
     private fun getResourcesId(resourcesList: List<String>): List<String>{
         return resourcesList.map {characterLink ->
             characterLink.filter {
                 it.isDigit()
             }
         }
+    }
+
+
+    fun getFirstParagraph() : String {
+        var indexEndOfFirstParagraph = opening_crawl.indexOf("\r\n\r\n")
+
+        // Tem um filme que não segue o padrão e separa os \r\n \r\n que são juntos nos outros filmes
+        if (indexEndOfFirstParagraph == -1) {
+            indexEndOfFirstParagraph = opening_crawl.indexOf("\r\n \r\n")
+        }
+
+        return opening_crawl.subSequence(0, indexEndOfFirstParagraph).toString() + "\n..."
     }
 
 }

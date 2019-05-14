@@ -28,25 +28,11 @@ class MovieAdapter(var movieList: List<Movie>, var context: Context) :
         viewHolder.movie = movie
         viewHolder.nameTextView.text = movie.title
         viewHolder.directorTextView.text = movie.director
-        viewHolder.openingCrawlTextView.text = getFirstParagraph(movie)
+        viewHolder.openingCrawlTextView.text = movie.getFirstParagraph()
         viewHolder.releaseDateTextView.text = movie.release_date
 
         val drawablePoster = ContextCompat.getDrawable(context, movie.posters[movie.episode_id]!!)
         viewHolder.moviePosterImageView.setImageDrawable(drawablePoster)
-    }
-
-
-    private fun getFirstParagraph(movie: Movie) : String {
-        val opening = movie.opening_crawl
-
-        var indexEndOfFirstParagraph = opening.indexOf("\r\n\r\n")
-
-        // Tem um filme que não segue o padrão e separa os \r\n \r\n que são juntos nos outros filmes
-        if (indexEndOfFirstParagraph == -1) {
-            indexEndOfFirstParagraph = opening.indexOf("\r\n \r\n")
-        }
-
-        return opening.subSequence(0, indexEndOfFirstParagraph).toString() + "\n..."
     }
 
 }

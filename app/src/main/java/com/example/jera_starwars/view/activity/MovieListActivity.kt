@@ -18,16 +18,14 @@ import android.widget.LinearLayout
 
 class MovieListActivity : AppCompatActivity(), MovieViewContract {
 
-    lateinit var recyclerView: RecyclerView
-    lateinit var progressbar: ProgressBar
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var progressbar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movielist)
         recyclerView = findViewById(R.id.movie_recylerview)
         progressbar = findViewById(R.id.progressbar)
-        //TODO mostrar um loading
-
 
         val movieListPresenter = MovieListPresenter(this)
         movieListPresenter.getAllMovies()
@@ -38,15 +36,12 @@ class MovieListActivity : AppCompatActivity(), MovieViewContract {
 
 
     /**
-     * Quando os filmes terminam de vir da API, coloca-as na lista do Adapter para atualizar a recyclerView
+     * Quando os filmes terminam de vir da API, coloca-os na lista do Adapter para atualizar a recyclerView
      * */
     override fun updateMoviesOnRecyclerView(movieList: List<Movie>) {
-        //TODO finalizar o loading
-
         progressbar.visibility = View.GONE
         (recyclerView.adapter as MovieAdapter).movieList = movieList
         recyclerView.adapter!!.notifyDataSetChanged()
-
-
     }
+
 }
